@@ -17,7 +17,7 @@ public class DyanaDrops {
         from.click();
 
         driver.findElement(By.xpath("//a[@text='Pune (PNQ)']")).click();
-
+        System.out.println("distination selected"+ driver.findElement(By.xpath("//a[@text='Pune (PNQ)']")).getText());
 
         WebElement to = driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT"));
         to.click();
