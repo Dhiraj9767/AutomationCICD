@@ -16,7 +16,8 @@ public class DyanaDrops {
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
         from.click();
 
-        driver.findElement(By.xpath("//a[@text='Pune (PNQ)']")).click();
+      //  driver.findElement(By.xpath("//a[@text='Pune (PNQ)']")).click();
+        driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_originStation1_CTNR'] //a[@text='Leh (IXL)']")).click();
         System.out.println("distination selected"+ driver.findElement(By.xpath("//a[@text='Pune (PNQ)']")).getText());
 
         WebElement to = driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT"));
