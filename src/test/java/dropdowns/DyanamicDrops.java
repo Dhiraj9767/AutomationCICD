@@ -1,11 +1,13 @@
 package dropdowns;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DyanamicDrops {
-    public static void main(String[] args) throws InterruptedException {
+    @Test
+    public void dyanamicDrop() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();

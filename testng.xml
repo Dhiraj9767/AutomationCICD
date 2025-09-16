@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="MyTestSuite" >
+    <test name="MyTests">
+        <classes>
+            <class name="org.chromesel.MultipleWindowHandlesTabs"/>
+            <class name="dropdowns.DyanaDrops"/>
+            <class name="dropdowns.DyanamicDrops"/>
+
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+

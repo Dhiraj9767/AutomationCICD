@@ -1,22 +1,31 @@
 package dropdowns;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class DyanaDrops {
-    public static void main(String[] args) throws InterruptedException {
+    @Test
+    public void dyanamicDrop() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
-        Thread.sleep(2000L);
+
+        WebDriverWait w= new WebDriverWait(driver, Duration.ofSeconds(5));
+        w.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_mainContent_ddl_originStation1_CTXT")));
 
         WebElement from = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
         from.click();
 
       //  driver.findElement(By.xpath("//a[@text='Pune (PNQ)']")).click();
+        w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='glsctl00_mainContent_ddl_originStation1_CTNR'] //a[@text='Leh (IXL)']")));
         driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_originStation1_CTNR'] //a[@text='Leh (IXL)']")).click();
         System.out.println("distination selected"+ driver.findElement(By.xpath("//a[@text='Pune (PNQ)']")).getText());
 
